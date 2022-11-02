@@ -1,77 +1,100 @@
 # Introduccion_a_la_Algoritmia_Ejercicio_2_B
 
-B) Vuelve a escribir el mismo algoritmo pero esta vez utilizando la estructura 
 
-       para ... fpara 
 
-       en lugar de 
+B. Indicación: Se pide usar un solo bucle y sumar, y por tanto no multiplicar tanto para determinar el resultado de las multiplicaciones entre los dos números introducidos por el usuario como si es correcto el resultado la multiplicación. A parte de las indicaciones que encontrarás en el propio código te muestro una captura en la que se han introducido el 5, el 7 y el 35:
 
-       mientras ... fmientras.
+Introduce un primer numero del 1 al 10:
+5
+Introduce un segundo numero del 1 al 10:
+7
+Cuanto crees que es el resultado de multiplicar 5 por 7?
+35
 
-Construir un algoritmo que cuente los enteros positivos inferiores a 1000 que cumplan que sean múltiplos de nueve. 
-Una manera de identificar si un número es múltiplo de nueve consiste en sumar los dígitos que componen el número a evaluar, tantas veces como haga falta hasta que nos encontremos con un número de un solo dígito. En ese momento podemos comprobar si ese número es el 9, y si lo es podremos concluir que el número analizado es efectivamente múltiplo de 9. 
+5 multiplicado po 0 es igual a 0
+5 multiplicado po 1 es igual a 5
+5 multiplicado po 2 es igual a 10
+5 multiplicado po 3 es igual a 15
+5 multiplicado po 4 es igual a 20
+5 multiplicado po 5 es igual a 25
+5 multiplicado po 6 es igual a 30
+5 multiplicado po 7 es igual a 35
+5 multiplicado po 8 es igual a 40
+5 multiplicado po 9 es igual a 45
+5 multiplicado po 10 es igual a 50
+5 multiplicado por 7 es efectivamente igual a 35
 
-Por ejemplo, si analizamos el 729, lo que haremos inicialmente será sumar 7+2+9 que es igual a 18. Como que 18 es un número de mas de un dígito, repetimos el proceso sumando ahora 1 + 8. Como que su suma es igual a 9, podemos concluir que 729 es múltiplo de 9.
-Se requiere para realizar el ejercicio que los múltiplos de 9 se identifiquen de esta forma que se acaba de detallar.
 
-A partir del esqueleto del algoritmo siguiente, rellena pues las lineas de subrallado que indican que falta algo en esa linea de manera que el algoritmo siguiente resuelva el problema planteado.
-    
-    algoritmo digitos      
+Y esta otra captura en la que se han introducido el 7, el 5 y el 36:
 
-    var     
-        n, numero, contador : entero;         
-        digitos : booleano;     
-    fvar       
 
-    {Pre: cierto }     
-  
-    contador := ________________ ;     
-    n := 1;  
-   
-    mientras  _______________  hacer  
+Introduce un primer numero del 1 al 10:
+7
+Introduce un segundo numero del 1 al 10:
+5
+Cuanto crees que es el resultado de multiplicar 5 por 7?
+36
 
-        digitos := falso;
+7 multiplicado po 0 es igual a 0
+7 multiplicado po 1 es igual a 7
+7 multiplicado po 2 es igual a 14
+7 multiplicado po 3 es igual a 21
+7 multiplicado po 4 es igual a 28
+7 multiplicado po 5 es igual a 35
+7 multiplicado po 6 es igual a 42
+7 multiplicado po 7 es igual a 49
+7 multiplicado po 8 es igual a 56
+7 multiplicado po 9 es igual a 63
+7 multiplicado po 10 es igual a 70
+7 multiplicado por 5 no es igual a 36, como has indicado.
 
-        si n < 10 entonces     
-            si n = 9 entonces
-                digitos := cierto;
-            fsi     
-        sino
 
-          si n < 100 entonces     
-               numero = ((n div 10 ) + (n mod 10));
-               si numero > 9 entonces
-                   numero = ((numero div 10 ) + (numero mod 10));
-               fsi
-               si numero = 9 entonces
-                   digitos := cierto;
-               fsi    
-           sinó      
-
-           si n < 1000 entonces      
-           _________________
-           _________________
-           _________________
-           _________________
-
-           fsi    
-          fsi   
-        fsi     
-
-        si digitos entonces           
-           _________________
-        fsi     
-
-        n := n + 1;     
-
-    fmientras      
-
-    {Una vez hechos los cálculos, se imprimirán los resultados por pantalla.}      
-    {Post: contador contiene el número de enteros positivos inferiores a 1000, que cumplen que son múltiplos de nueve.}  
-    
-    falgoritmo
-
-Nótese que en el algoritmo anterior tiene que rellenar los cuadros con una única instrucción o expresión, a excepción de la rama alternativa del si ... sino, que puede estar constituida por una composición secuencial de acciones.
+Para simplificar consideraremos que siempre se introducen dos números enteros comprendidos entre el 1 y el 10. Se han de usar todas las variables que aparecen en la declaración.
  
 
+        #define _CRT_SECURE_NO_WARNINGS
 
+        //Likamos las librerías
+        #include <stdio.h>
+        #include <stdbool.h>
+
+
+        int main(void)
+        {
+            //Declaración de variables
+            int a, b, axb_usuario, axb, i, correcto=false, resultado;
+
+            //Demandamos los datos al usuario
+            printf("Introduce un primer numero del 1 al 10:\n");
+            scanf("%d", &a);
+
+            printf("Introduce un segundo numero del 1 al 10:\n");
+            scanf("%d", &b);
+
+            printf("Cuanto crees que es el resultado de multiplicar %d por %d?\n",a,b);
+            scanf("%d", &axb_usuario);
+
+
+            //Se ha de determinar cual es el resultado de multiplicar a * b mediante un bucle en el que se vaya sumando, no multiplicando a por b.
+
+            _____________________________________________________
+
+            _____________________________________________________
+
+            _____________________________________________________
+
+            _____________________________________________________
+
+            _____________________________________________________
+
+            _____________________________________________________
+
+            
+
+            printf("\n\n");
+
+
+            system("pause");
+
+            return 0;
+       }
