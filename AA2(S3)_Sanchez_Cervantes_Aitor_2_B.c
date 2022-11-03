@@ -38,7 +38,7 @@ int main(void)
         printf("%d multiplicado por %d es efectivamente igual a %d", a, b, resultado);
     }
     else {
-        printf("%d multiplicado por %d no es igual a %d", a, b, resultado);
+        printf("%d multiplicado por %d no es igual a %d, como has indicado.", a, b, resultado);
     }
 
     printf("\n\n");
